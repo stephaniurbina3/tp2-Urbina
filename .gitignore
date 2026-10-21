@@ -1,0 +1,28 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Cachés de Python y herramientas
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Secretos
+.env
+*.key
+
+# Editor / sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Salidas generadas: se conserva la carpeta, no su contenido
+outputs/*
+!outputs/.gitkeep
+
+# Datos crudos pesados (el volcado completo no se sube)
+data/raw/
+*.csv.gz
