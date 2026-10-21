@@ -19,7 +19,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Salidas generadas: se conserva la carpeta, no su contenido
+# Salidas generadas
 outputs/*
 !outputs/.gitkeep
 

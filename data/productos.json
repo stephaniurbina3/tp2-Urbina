@@ -1,0 +1,2045 @@
+[
+  {
+    "codigo": "0067090727615",
+    "nombre": "Galletitas Dulces Alfa",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1896,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 18.8,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 9.7,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 64.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 17.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 6.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 513,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0135212223863",
+    "nombre": "Galletitas De agua Gamma",
+    "categorias": "Galletitas, Snacks",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 158,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 6.2,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 23.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 2.1,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 186,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0219803346352",
+    "nombre": "Jugo Manzana Beta",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 44,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 10.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 10,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0363856073927",
+    "nombre": "Yogur Frutilla Sigma",
+    "categorias": "Yogures, Postres",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 187,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 0.5,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 6.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 6.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 89,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0501351006371",
+    "nombre": "Galletitas De limón Sigma",
+    "categorias": "Galletitas",
+    "base": "porcion",
+    "porcion_g": 30,
+    "nutrientes": {
+      "energia": {
+        "valor": 114,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 3.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 18.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 4.1,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 1.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 66,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0675347897133",
+    "nombre": "Yogur Vainilla Beta",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 440,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 3.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 15.6,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.9,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.1,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 65,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0805780370412",
+    "nombre": "Yogur Natural Sigma",
+    "categorias": "Yogures",
+    "base": "porcion",
+    "porcion_g": 125,
+    "nutrientes": {
+      "energia": {
+        "valor": 109,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 22.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 11.0,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 62,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "0973481241726",
+    "nombre": "Galletitas Integrales Alfa",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1961,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 21.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 61.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 16.8,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 6.4,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 330,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "15846450",
+    "nombre": "Cereal Aros Gamma",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1123,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 1.1,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.7,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 55.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 6.3,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 9.1,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 309,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "16354011",
+    "nombre": "Jugo Multifruta Alfa",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "grasas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 9.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.014,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "19043163",
+    "nombre": "Jugo Manzana Alfa",
+    "categorias": "Jugos, Bebidas",
+    "base": "porcion",
+    "porcion_g": 250,
+    "nutrientes": {
+      "energia": {
+        "valor": 523,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 1.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 26.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 20.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 2.0,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 65,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "68828112",
+    "nombre": "Cereal Aros Alfa",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 379,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 7.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 69.0,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 24.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 8.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.088,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "71929480",
+    "nombre": "Jugo Naranja Alfa",
+    "categorias": "Jugos, Sin conservantes",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 197,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 10.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 10.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.5,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.01,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7790125373924",
+    "nombre": "Yogur Durazno Beta",
+    "categorias": "Yogures, Postres",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 106,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 3.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 16.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 9.8,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.0,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 78,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7790126708129",
+    "nombre": "Galletitas Con chips Delta",
+    "categorias": "Galletitas",
+    "base": "porcion",
+    "porcion_g": 30,
+    "nutrientes": {
+      "energia": {
+        "valor": 127,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 5.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.6,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 16.8,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.3,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 1.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.181,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7790126708129",
+    "nombre": "Galletitas Dulces Delta",
+    "categorias": "Galletitas, Snacks",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1555,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 14.5,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 5.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 55.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 26.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.0,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 303,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7790668179223",
+    "nombre": "Yogur Frutilla Gamma",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 85,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.1,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.0,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 4.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 44,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7791059148335",
+    "nombre": "Jugo Naranja Gamma",
+    "categorias": "Jugos",
+    "base": "porcion",
+    "porcion_g": 250,
+    "nutrientes": {
+      "energia": {
+        "valor": 109,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 2.0,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7791280845850",
+    "nombre": "Cereal Aros Delta",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 368,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 7.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 70.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.0,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.2,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7791452441064",
+    "nombre": "Cereal Trigo inflado Gamma",
+    "categorias": "Cereales, Integrales",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 523,
+        "unidad": "kJ"
+      },
+      "grasas_saturadas": {
+        "valor": 1.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 23.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 4.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 2.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 120,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7791988904216",
+    "nombre": "Jugo Ananá Sigma",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "grasas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 12.0,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 8,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7792014613380",
+    "nombre": "Jugo Multifruta Beta",
+    "categorias": "Jugos",
+    "base": "porcion",
+    "porcion_g": 250,
+    "nutrientes": {
+      "energia": {
+        "valor": 540,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 29.0,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 23.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 2.3,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 69,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7792940557616",
+    "nombre": "Cereal Copos de maíz Delta",
+    "categorias": "Cereales, Desayuno",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 518,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 25.6,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 10.0,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 142,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7792974476604",
+    "nombre": "Galletitas Dulces Beta",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1892,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 21.0,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 10.3,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 59.6,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 14.9,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 6.2,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 206,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7793161030225",
+    "nombre": "Galletitas Integrales Gamma",
+    "categorias": "Galletitas",
+    "base": "porcion",
+    "porcion_g": 30,
+    "nutrientes": {
+      "energia": {
+        "valor": 131,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 6.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 3.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 16.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 6.3,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 1.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.196,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7793349677044",
+    "nombre": "Galletitas De agua Beta",
+    "categorias": "Galletitas",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 166,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 6.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.3,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 24.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.0,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.2,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 272,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7793516199456",
+    "nombre": "Jugo Manzana Delta",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 155,
+        "unidad": "kJ"
+      },
+      "carbohidratos": {
+        "valor": 8.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.9,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.008,
+        "unidad": "g"
+      },
+      "grasas": {
+        "valor": 140.0,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7794419303995",
+    "nombre": "Jugo Durazno Alfa",
+    "categorias": "Jugos",
+    "base": "porcion",
+    "porcion_g": 250,
+    "nutrientes": {
+      "energia": {
+        "valor": 129,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.1,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 29.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 25.1,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.5,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 31,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7794646686316",
+    "nombre": "Galletitas Rellenas Alfa",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1659,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 14.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 5.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 57.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 10.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 8.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 430,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7795154742843",
+    "nombre": "Yogur Natural Alfa",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 92,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 3.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 11.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.8,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 63,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7795218248861",
+    "nombre": "Yogur Bebible Gamma",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 99,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 2.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 12.6,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": -4.0,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 76,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7795470567090",
+    "nombre": "Jugo Durazno Beta",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 40,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 8.6,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.6,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7795475177992",
+    "nombre": "Cereal Muesli Sigma",
+    "categorias": "Cereales, Desayuno",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1671,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 8.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 73.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 11.3,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 7.5,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7795940692566",
+    "nombre": "Cereal Granola Delta",
+    "categorias": "Cereales",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 601,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 1.8,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 27.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.3,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7796158129991",
+    "nombre": "Galletitas De agua Delta",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1730,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 16.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 58.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 17.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 7.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 492,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7796210761770",
+    "nombre": "Jugo Multifruta Gamma",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 47,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 10.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 10.1,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 6,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7796252807001",
+    "nombre": "Yogur Griego Delta",
+    "categorias": "Yogures",
+    "base": "porcion",
+    "porcion_g": 125,
+    "nutrientes": {
+      "energia": {
+        "valor": 90,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 15.0,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 10.3,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.5,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7796550620484",
+    "nombre": "Yogur Natural Delta",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 246,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 8.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 60,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7796927670940",
+    "nombre": "Jugo Pomelo Beta",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 41,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 9.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 9.7,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 16,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7797207547354",
+    "nombre": "Yogur Bebible Beta",
+    "categorias": "Yogures, Postres",
+    "base": "porcion",
+    "porcion_g": 125,
+    "nutrientes": {
+      "energia": {
+        "valor": 112,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 3.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 2.6,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 15.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 6.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.8,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 76,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7797443256885",
+    "nombre": "Yogur Frutilla Alfa",
+    "categorias": "Yogures, Postres",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 95,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 14.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.072,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7797457212835",
+    "nombre": "Yogur Natural Gamma",
+    "categorias": "Yogures, Lácteos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 83,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 13.9,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 5.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.6,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 62,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7797513",
+    "nombre": "Cereal Muesli Gamma",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 345,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 5.0,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.9,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 68.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 3.9,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 6.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 256,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7797827608219",
+    "nombre": "Galletitas Rellenas Delta",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 418,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 17.2,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 9.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 59.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 12.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 6.3,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 431,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7797916979780",
+    "nombre": "Yogur Griego Alfa",
+    "categorias": "Yogures",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 106,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 2.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.8,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 17.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 12.0,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 53,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798010005200",
+    "nombre": "Galletitas De limón Alfa",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 426,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 17.7,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 59.8,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 16.5,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 7.1,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 0.559,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7798195391827",
+    "nombre": "Yogur Frutilla Beta",
+    "categorias": "Yogures, Lácteos",
+    "base": "porcion",
+    "porcion_g": 170,
+    "nutrientes": {
+      "energia": {
+        "valor": 152,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 4.0,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 3.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 19.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.1,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 9.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 101,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798205258983",
+    "nombre": "Cereal Aros Sigma",
+    "categorias": "Cereales",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 128,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.0,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 25.7,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.0,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 72,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798222646861",
+    "nombre": "Cereal Avena Gamma",
+    "categorias": "Cereales, Desayuno",
+    "base": "porcion",
+    "porcion_g": 30,
+    "nutrientes": {
+      "energia": {
+        "valor": 414,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 1.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 20.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 6.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 1.6,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "7798296017967",
+    "nombre": "Jugo Multifruta Sigma",
+    "categorias": "Jugos, Bebidas",
+    "base": "porcion",
+    "porcion_g": 200,
+    "nutrientes": {
+      "energia": {
+        "valor": 81,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.9,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 16.7,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 16.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 23,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798370950601",
+    "nombre": "Galletitas Integrales Beta",
+    "categorias": "Galletitas, Desayuno",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1807,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 16.0,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 5.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 63.1,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 19.3,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 629,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798669538965",
+    "nombre": "Jugo Durazno Sigma",
+    "categorias": "Jugos",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 54,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 12.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.1,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 0.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 26,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7798794326270",
+    "nombre": "Cereal Muesli Alfa",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 304,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 1.1,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 1.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 64.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 29.2,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 9.1,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 438,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7799787534778",
+    "nombre": "Cereal Aros Beta",
+    "categorias": "Cereales",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 134,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.8,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 27.4,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.9,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 4.3,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 196,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7799822290044",
+    "nombre": "Yogur Bebible Alfa",
+    "categorias": "Yogures",
+    "base": "porcion",
+    "porcion_g": 170,
+    "nutrientes": {
+      "energia": {
+        "valor": 153,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 6.7,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.1,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 13.8,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 13.8,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 9.5,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 79,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "7799842640794",
+    "nombre": "Jugo Pomelo Gamma",
+    "categorias": "Jugos",
+    "base": "porcion",
+    "porcion_g": 200,
+    "nutrientes": {
+      "energia": {
+        "valor": 115,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 0.6,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 0.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 25.9,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 15.8,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 1.5,
+        "unidad": "g"
+      }
+    }
+  },
+  {
+    "codigo": "81967273",
+    "nombre": "Cereal Granola Alfa",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 344,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 5.4,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 3.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 63.5,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 24.7,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 10.2,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 444,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "82802582",
+    "nombre": "Cereal Granola Sigma",
+    "categorias": "Cereales",
+    "base": "porcion",
+    "porcion_g": 40,
+    "nutrientes": {
+      "energia": {
+        "valor": 494,
+        "unidad": "kJ"
+      },
+      "grasas": {
+        "valor": 1.5,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 22.3,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 7.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 3.9,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 49,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "83792984",
+    "nombre": "Cereal Trigo inflado Alfa",
+    "categorias": "Cereales",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 1423,
+        "unidad": "kJ"
+      },
+      "grasas_saturadas": {
+        "valor": 3.4,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 67.2,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 8.4,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 5.7,
+        "unidad": "g"
+      },
+      "sodio": {
+        "valor": 70,
+        "unidad": "mg"
+      }
+    }
+  },
+  {
+    "codigo": "95349404",
+    "nombre": "Galletitas Con chips Sigma",
+    "categorias": "Galletitas",
+    "base": "100g",
+    "nutrientes": {
+      "energia": {
+        "valor": 451,
+        "unidad": "kcal"
+      },
+      "grasas": {
+        "valor": 18.3,
+        "unidad": "g"
+      },
+      "grasas_saturadas": {
+        "valor": 6.2,
+        "unidad": "g"
+      },
+      "carbohidratos": {
+        "valor": 63.9,
+        "unidad": "g"
+      },
+      "azucares": {
+        "valor": 16.6,
+        "unidad": "g"
+      },
+      "proteinas": {
+        "valor": 7.8,
+        "unidad": "g"
+      }
+    }
+  }
+]

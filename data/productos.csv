@@ -1,0 +1,61 @@
+codigo,nombre,categorias,base,porcion_g,energia_valor,energia_unidad,grasas_valor,grasas_unidad,grasas_saturadas_valor,grasas_saturadas_unidad,carbohidratos_valor,carbohidratos_unidad,azucares_valor,azucares_unidad,proteinas_valor,proteinas_unidad,sodio_valor,sodio_unidad
+0067090727615,Galletitas Dulces Alfa,Galletitas,100g,,1896,kJ,18.8,g,9.7,g,64.4,g,17.2,g,6.7,g,513,mg
+0135212223863,Galletitas De agua Gamma,"Galletitas, Snacks",porcion,40,158,kcal,6.2,g,2.1,g,23.5,g,,,2.1,g,186,mg
+0219803346352,Jugo Manzana Beta,Jugos,100g,,44,kcal,0.2,g,0.1,g,10.2,g,7.6,g,0.2,g,10,mg
+0363856073927,Yogur Frutilla Sigma,"Yogures, Postres",100g,,187,kJ,0.5,g,0.3,g,6.2,g,6.2,g,3.8,g,89,mg
+0501351006371,Galletitas De limón Sigma,Galletitas,porcion,30,114,kcal,3.9,g,1.4,g,18.1,g,4.1,g,1.6,g,66,mg
+0675347897133,Yogur Vainilla Beta,Yogures,100g,,440,kJ,3.4,g,2.1,g,15.6,g,7.9,g,3.1,g,65,mg
+0805780370412,Yogur Natural Sigma,Yogures,porcion,125,109,kcal,0.6,g,0.4,g,22.3,g,11.0,g,3.8,g,62,mg
+0973481241726,Galletitas Integrales Alfa,Galletitas,100g,,1961,kJ,21.9,g,,,61.7,g,16.8,g,6.4,g,330,mg
+15846450,Cereal Aros Gamma,Cereales,100g,,1123,kJ,1.1,g,0.7,g,55.5,g,6.3,g,9.1,g,309,mg
+16354011,Jugo Multifruta Alfa,Jugos,100g,,,,0.4,g,,,9.2,g,,,0.6,g,0.014,g
+19043163,Jugo Manzana Alfa,"Jugos, Bebidas",porcion,250,523,kJ,1.2,g,,,26.5,g,20.5,g,2.0,g,65,mg
+68828112,Cereal Aros Alfa,Cereales,100g,,379,kcal,7.5,g,,,69.0,g,24.5,g,8.8,g,0.088,g
+71929480,Jugo Naranja Alfa,"Jugos, Sin conservantes",100g,,197,kJ,0.3,g,0.0,g,10.7,g,10.4,g,0.5,g,0.01,g
+7790125373924,Yogur Durazno Beta,"Yogures, Postres",100g,,106,kcal,3.3,g,2.4,g,16.1,g,9.8,g,3.0,g,78,mg
+7790126708129,Galletitas Con chips Delta,Galletitas,porcion,30,127,kcal,5.9,g,2.6,g,16.8,g,7.3,g,1.7,g,0.181,g
+7790126708129,Galletitas Dulces Delta,"Galletitas, Snacks",100g,,1555,kJ,14.5,g,5.9,g,55.4,g,26.2,g,5.0,g,303,mg
+7790668179223,Yogur Frutilla Gamma,Yogures,100g,,85,kcal,1.1,g,0.0,g,,,4.5,g,5.8,g,44,mg
+7791059148335,Jugo Naranja Gamma,Jugos,porcion,250,109,kcal,0.8,g,0.4,g,,,,,2.0,g,,
+7791280845850,Cereal Aros Delta,Cereales,100g,,368,kcal,7.2,g,,,70.5,g,8.0,g,5.2,g,,
+7791452441064,Cereal Trigo inflado Gamma,"Cereales, Integrales",porcion,40,523,kJ,,,1.0,g,23.7,g,4.4,g,2.6,g,120,mg
+7791988904216,Jugo Ananá Sigma,Jugos,100g,,,,0.1,g,,,12.0,g,7.6,g,0.3,g,8,mg
+7792014613380,Jugo Multifruta Beta,Jugos,porcion,250,540,kJ,0.4,g,0.4,g,29.0,g,23.4,g,2.3,g,69,mg
+7792940557616,Cereal Copos de maíz Delta,"Cereales, Desayuno",porcion,40,518,kJ,0.8,g,0.8,g,25.6,g,10.0,g,3.6,g,142,mg
+7792974476604,Galletitas Dulces Beta,Galletitas,100g,,1892,kJ,21.0,g,10.3,g,59.6,g,14.9,g,6.2,g,206,mg
+7793161030225,Galletitas Integrales Gamma,Galletitas,porcion,30,131,kcal,6.4,g,3.0,g,16.7,g,6.3,g,1.7,g,0.196,g
+7793349677044,Galletitas De agua Beta,Galletitas,porcion,40,166,kcal,6.3,g,2.3,g,24.2,g,8.0,g,3.2,g,272,mg
+7793516199456,Jugo Manzana Delta,Jugos,100g,,155,kJ,140.0,g,,,8.2,g,7.9,g,0.6,g,0.008,g
+7794419303995,Jugo Durazno Alfa,Jugos,porcion,250,129,kcal,1.1,g,0.2,g,29.3,g,25.1,g,0.5,g,31,mg
+7794646686316,Galletitas Rellenas Alfa,Galletitas,100g,,1659,kJ,14.6,g,5.9,g,57.3,g,10.2,g,8.9,g,430,mg
+7795154742843,Yogur Natural Alfa,Yogures,100g,,92,kcal,3.6,g,2.0,g,11.4,g,7.8,g,3.6,g,63,mg
+7795218248861,Yogur Bebible Gamma,Yogures,100g,,99,kcal,2.9,g,0.9,g,12.6,g,-4.0,g,5.6,g,76,mg
+7795470567090,Jugo Durazno Beta,Jugos,100g,,40,kcal,0.4,g,0.2,g,8.6,g,8.6,g,0.6,g,,
+7795475177992,Cereal Muesli Sigma,"Cereales, Desayuno",100g,,1671,kJ,8.5,g,,,73.3,g,11.3,g,7.5,g,,
+7795940692566,Cereal Granola Delta,Cereales,porcion,40,601,kJ,1.8,g,0.2,g,27.6,g,,,4.3,g,,
+7796158129991,Galletitas De agua Delta,Galletitas,100g,,1730,kJ,16.5,g,,,58.4,g,17.5,g,7.9,g,492,mg
+7796210761770,Jugo Multifruta Gamma,Jugos,100g,,47,kcal,0.3,g,0.1,g,10.1,g,10.1,g,0.8,g,6,mg
+7796252807001,Yogur Griego Delta,Yogures,porcion,125,90,kcal,0.9,g,0.9,g,15.0,g,10.3,g,5.5,g,,
+7796550620484,Yogur Natural Delta,Yogures,100g,,246,kJ,0.6,g,0.6,g,8.5,g,8.5,g,4.9,g,60,mg
+7796927670940,Jugo Pomelo Beta,Jugos,100g,,41,kcal,0.1,g,0.0,g,9.7,g,9.7,g,0.2,g,16,mg
+7797207547354,Yogur Bebible Beta,"Yogures, Postres",porcion,125,112,kcal,3.6,g,2.6,g,15.3,g,6.6,g,4.8,g,76,mg
+7797443256885,Yogur Frutilla Alfa,"Yogures, Postres",100g,,95,kcal,1.9,g,1.9,g,14.4,g,8.6,g,4.9,g,0.072,g
+7797457212835,Yogur Natural Gamma,"Yogures, Lácteos",100g,,83,kcal,1.4,g,1.4,g,13.9,g,5.4,g,3.6,g,62,mg
+7797513,Cereal Muesli Gamma,Cereales,100g,,345,kcal,5.0,g,1.9,g,68.3,g,3.9,g,6.7,g,256,mg
+7797827608219,Galletitas Rellenas Delta,Galletitas,100g,,418,kcal,17.2,g,9.4,g,59.5,g,12.5,g,6.3,g,431,mg
+7797916979780,Yogur Griego Alfa,Yogures,100g,,106,kcal,2.4,g,1.8,g,17.1,g,12.0,g,,,53,mg
+7798010005200,Galletitas De limón Alfa,Galletitas,100g,,426,kcal,17.7,g,,,59.8,g,16.5,g,7.1,g,0.559,g
+7798195391827,Yogur Frutilla Beta,"Yogures, Lácteos",porcion,170,152,kcal,4.0,g,3.0,g,19.2,g,7.1,g,9.9,g,101,mg
+7798205258983,Cereal Aros Sigma,Cereales,porcion,40,128,kcal,1.0,g,,,25.7,g,,,4.0,g,72,mg
+7798222646861,Cereal Avena Gamma,"Cereales, Desayuno",porcion,30,414,kJ,1.3,g,0.5,g,20.1,g,6.4,g,1.6,g,,
+7798296017967,Jugo Multifruta Sigma,"Jugos, Bebidas",porcion,200,81,kcal,0.9,g,0.3,g,16.7,g,16.7,g,,,23,mg
+7798370950601,Galletitas Integrales Beta,"Galletitas, Desayuno",100g,,1807,kJ,16.0,g,5.2,g,63.1,g,19.3,g,,,629,mg
+7798669538965,Jugo Durazno Sigma,Jugos,100g,,54,kcal,0.3,g,0.1,g,12.2,g,8.1,g,0.7,g,26,mg
+7798794326270,Cereal Muesli Alfa,Cereales,100g,,304,kcal,1.1,g,1.1,g,64.4,g,29.2,g,9.1,g,438,mg
+7799787534778,Cereal Aros Beta,Cereales,porcion,40,134,kcal,0.8,g,0.8,g,27.4,g,8.9,g,4.3,g,196,mg
+7799822290044,Yogur Bebible Alfa,Yogures,porcion,170,153,kcal,6.7,g,0.1,g,13.8,g,13.8,g,9.5,g,79,mg
+7799842640794,Jugo Pomelo Gamma,Jugos,porcion,200,115,kcal,0.6,g,0.2,g,25.9,g,15.8,g,1.5,g,,
+81967273,Cereal Granola Alfa,Cereales,100g,,344,kcal,5.4,g,3.5,g,63.5,g,24.7,g,10.2,g,444,mg
+82802582,Cereal Granola Sigma,Cereales,porcion,40,494,kJ,1.5,g,,,22.3,g,7.6,g,3.9,g,49,mg
+83792984,Cereal Trigo inflado Alfa,Cereales,100g,,1423,kJ,,,3.4,g,67.2,g,8.4,g,5.7,g,70,mg
+95349404,Galletitas Con chips Sigma,Galletitas,100g,,451,kcal,18.3,g,6.2,g,63.9,g,16.6,g,7.8,g,,
