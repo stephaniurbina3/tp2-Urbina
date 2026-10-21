@@ -46,43 +46,73 @@ _Instrucciones de uso con ejemplos: pendiente._
 
 ## 4. Datos: fuente, licencia y unidad de análisis
 
-- **Fuente prevista:** [Open Food Facts](https://world.openfoodfacts.org/data). El volcado completo pesa varios GB y no se incluirá en el repositorio: se versionará una muestra pequeña y se documentará cómo obtener el resto.
-- **Licencia de los datos:** Open Database License (ODbL) para la base y Database Contents License para los contenidos; se citará la fuente.
+- **Fuente de referencia:** [Open Food Facts](https://world.openfoodfacts.org/data). El volcado completo pesa varios GB y no se incluye en el repositorio.
+- **Muestra incluida:** por problemas con la API de Open Food Facts, `data/productos.csv` y `data/productos.json` contienen una muestra de **datos ficticios** con el mismo formato que tendrían los datos reales. Se genera con `scripts/generar_muestra`. Procedencia, unidades y criterios de selección: ver `data/README.md`.
+- **Licencia de los datos de referencia:** Open Database License (ODbL) para la base y Database Contents License para los contenidos; se cita la fuente.
 - **Unidad de análisis:** un producto, identificado por su código de barras.
-- _Procedimiento de obtención, fecha de consulta y variables: pendiente (se documentará en `data/README.md`)._
 
 ## 5. Instalación y ejecución
 
-_Pendiente: se completará con los comandos exactos para ejecutar la aplicación y las pruebas._
+**Pruebas** (desde la raíz del repositorio):
+
+```text
+python -m unittest discover tests
+```
+
+También se pueden ejecutar desde VS Code, en el panel Testing.
+
+_Pendiente: comandos para ejecutar la aplicación (se completarán cuando exista `main.py`)._
 
 ## 6. Organización del código
 
-Estructura prevista (se irá completando):
+Estructura actual (se irá completando):
 
 ```text
 tp2-apellido/
 |-- README.md
 |-- requirements.txt
 |-- .gitignore
-|-- src/        código de la aplicación: funciones y clases (una clase por archivo)
-|-- tests/      pruebas automatizadas
+|-- src/
+|   |-- fuente_datos.py   clase abstracta FuenteDatos
+|   |-- fuente_csv.py     clase FuenteCSV
+|   |-- fuente_json.py    clase FuenteJSON
+|   '-- fuentes.py        selección de la fuente según la extensión
+|-- tests/
+|   '-- test_fuentes.py   pruebas de lectura de CSV y JSON
 |-- scripts/    utilidades para preparar los datos
 |-- data/       muestra de datos y su procedencia
 '-- outputs/    resultados generados (no se versionan)
 ```
 
+`src/` no es un paquete (no tiene `__init__.py`): los módulos se importan por su nombre, por ejemplo `from fuentes import crear_fuente`. Cada clase está en su propio archivo.
+
 Diseño previsto:
 
-| Elemento | Responsabilidad |
-|---|---|
-| `normalizar_ficha()` | Extrae los campos anidados de un registro y convierte las unidades |
-| `indexar_productos()` | Construye el índice por código, conservando los códigos como texto |
-| `buscar_producto()` | Devuelve la ficha de un código |
-| `comparar_etiquetas()` | Construye la tabla homogénea con marcas de no disponible |
-| `ProductoNutricional` | Clase que contiene la ficha y entrega cada nutriente en la unidad de comparación |
-| `FuenteDatos` | Clase abstracta con `cargar()`; la implementan `FuenteCSV` y `FuenteJSON` |
+| Elemento | Responsabilidad | Estado |
+|---|---|---|
+| `FuenteDatos` | Clase abstracta con `cargar()`; la implementan `FuenteCSV` y `FuenteJSON` | Implementado |
+| `FuenteCSV` / `FuenteJSON` | Leen el archivo y devuelven la misma estructura de productos | Implementado |
+| `crear_fuente()` | Elige la fuente según la extensión del archivo | Implementado |
+| `normalizar_ficha()` | Extrae los campos anidados de un registro y convierte las unidades | Pendiente |
+| `indexar_productos()` | Construye el índice por código, conservando los códigos como texto | Pendiente |
+| `buscar_producto()` | Devuelve la ficha de un código | Pendiente |
+| `comparar_etiquetas()` | Construye la tabla homogénea con marcas de no disponible | Pendiente |
+| `ProductoNutricional` | Clase que contiene la ficha y entrega cada nutriente en la unidad de comparación | Pendiente |
 
 **Expresión regular prevista:** validar que el código tenga exactamente 8 o 13 dígitos. Esta validación **no comprueba el dígito de control** del EAN.
+
+### 6.1 Decisiones de diseño: lectura de datos
+
+- **Una clase por archivo.** `FuenteDatos`, `FuenteCSV` y `FuenteJSON` están en archivos separados. `fuentes.py` solo contiene funciones.
+- **Clase abstracta.** `FuenteDatos` usa `abc.ABC` y declara el método abstracto `cargar()`. Cada formato lo implementa a su manera, y el resto del programa llama a `cargar()` sin saber si el archivo es CSV o JSON (polimorfismo).
+- **Misma estructura de salida.** Las dos fuentes devuelven una lista de diccionarios, uno por producto, con `codigo`, `nombre`, `categorias`, `base`, `porcion_g` (si corresponde) y `nutrientes`. Por eso los dos formatos son intercambiables.
+- **Código como texto.** El código de barras se lee siempre como `str` para conservar los ceros iniciales.
+- **Nutrientes no informados.** Una celda vacía del CSV no se convierte en cero: el nutriente simplemente no aparece en el diccionario del producto.
+- **Selección por extensión.** `crear_fuente(ruta)` elige `FuenteCSV` o `FuenteJSON` según la extensión (sin distinguir mayúsculas) y falla con un mensaje claro si el formato no es compatible.
+- **Solo lectura.** Esta etapa no valida códigos, rangos ni duplicados, y no convierte unidades: eso se hace en una etapa posterior.
+- **Errores claros.** Archivo inexistente, columnas faltantes, números inválidos (con el número de fila), JSON mal formado o con estructura incorrecta se informan con un mensaje que dice qué falló y dónde.
+- **Biblioteca estándar.** Se usan `csv` y `json`, que alcanzan para este caso.
+- **Pruebas.** `tests/test_fuentes.py` prueba cada fuente con archivos temporales, la selección de la fuente, que la clase abstracta no se pueda instanciar y la equivalencia entre `data/productos.csv` y `data/productos.json`.
 
 ## 7. Ejemplo de resultado
 
