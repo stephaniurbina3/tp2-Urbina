@@ -140,6 +140,31 @@ Si un producto incumple varias reglas, se registra la primera que falla, en este
 - **Duplicados:** se conserva la primera aparición válida y se rechazan las siguientes. Si la primera fue rechazada por otra regla, una repetición válida posterior sí entra.
 - **Registro de rechazados:** cada rechazo guarda la posición en el archivo, el código, el nombre, el tipo y el motivo. El programa continúa con los productos válidos.
 
+### Dominio y conversión de unidades (`src/producto.py`, `src/conversiones.py`, `src/pipeline.py`)
+
+- **`ProductoNutricional`** (`producto.py`) contiene la ficha normalizada de un producto: código, nombre, categorías (lista) y nutrientes por cada 100 g. Su método `obtener(nutriente)` devuelve el valor en la unidad de comparación, o `None` si el nutriente no está disponible. Si el nombre no corresponde a un nutriente conocido, levanta un error, para que un error de tipeo no se confunda con un dato no disponible.
+- **`normalizar_ficha()`** (`pipeline.py`) transforma un producto ya validado en una ficha homogénea: convierte cada nutriente a su unidad de comparación y lo lleva a una base de 100 g. No redondea; los valores conservan su precisión.
+- **`preparar_catalogo()`** (`pipeline.py`) integra el flujo: lee el archivo, valida, normaliza los productos válidos y devuelve también el registro de rechazados. Los productos rechazados no se normalizan.
+
+**Unidad de comparación (siempre por cada 100 g):**
+
+| Nutriente | Unidad |
+|---|---|
+| Energía | kcal |
+| Grasas, grasas saturadas, carbohidratos, azúcares, proteínas | g |
+| Sodio | mg |
+
+**Conversiones** (`conversiones.py`):
+- 1 kcal = 4,184 kJ.
+- 1 g = 1000 mg.
+- Base `porcion`: valor × 100 / `porcion_g`. Si la base ya es `100g`, el valor no cambia.
+- Las unidades incompatibles (por ejemplo, de g a kcal) levantan un error.
+
+**Tratamiento de faltantes:**
+- Un nutriente no disponible no aparece en la ficha normalizada y `obtener()` devuelve `None`. Nunca se convierte en cero.
+- Un cero declarado en la etiqueta sí se conserva como `0.0`.
+- Las categorías se guardan como lista; la regla para seleccionar productos por categoría se documentará al implementarla.
+
 ## 7. Ejemplo de resultado
 
 _Pendiente: se agregará una salida real cuando la aplicación funcione._
