@@ -72,7 +72,7 @@ tp2-apellido/
 |-- README.md
 |-- requirements.txt
 |-- .gitignore
-|-- src/
+|-- src/        código de la aplicación: funciones y clases agrupadas por tema
 |   |-- fuente_datos.py   clase abstracta FuenteDatos
 |   |-- fuente_csv.py     clase FuenteCSV
 |   |-- fuente_json.py    clase FuenteJSON
@@ -113,6 +113,32 @@ Diseño previsto:
 - **Errores claros.** Archivo inexistente, columnas faltantes, números inválidos (con el número de fila), JSON mal formado o con estructura incorrecta se informan con un mensaje que dice qué falló y dónde.
 - **Biblioteca estándar.** Se usan `csv` y `json`, que alcanzan para este caso.
 - **Pruebas.** `tests/test_fuentes.py` prueba cada fuente con archivos temporales, la selección de la fuente, que la clase abstracta no se pueda instanciar y la equivalencia entre `data/productos.csv` y `data/productos.json`.
+
+### Reglas de validación (`src/validaciones.py`)
+
+Cada regla levanta un `ErrorDatos` (definido en `src/error_datos.py`) con un **tipo** y un **detalle**. `validar_catalogo()` atrapa el error, aparta el producto y lo registra, sin detener el programa. `cargar_catalogo()` (en `src/pipeline.py`) integra la lectura con la validación y devuelve la lista de productos válidos y la de rechazados.
+
+Si un producto incumple varias reglas, se registra la primera que falla, en este orden:
+
+| Orden | Regla | Tipo de rechazo |
+|---|---|---|
+| 1 | El código es texto y tiene exactamente 8 o 13 dígitos | `codigo_invalido` |
+| 2 | El nombre no está vacío | `nombre_faltante` |
+| 3 | La base es `100g` o `porcion`; si es `porcion`, hay un `porcion_g` mayor que cero | `base_invalida` |
+| 4 | Cada nutriente informado tiene un valor numérico y finito | `valor_invalido` |
+| 5 | La unidad es una de las admitidas (energía: `kcal` o `kJ`; el resto: `g` o `mg`) | `unidad_desconocida` |
+| 6 | El valor no es negativo | `valor_negativo` |
+| 7 | El valor no supera el máximo posible (ver abajo) | `fuera_de_rango` |
+| 8 | El código no se repite en el catálogo | `codigo_duplicado` |
+
+**Decisiones:**
+- **Expresión regular del código:** `[0-9]{8}|[0-9]{13}`, aplicada con `fullmatch`. Valida solo la forma (8 o 13 dígitos ASCII). No comprueba el dígito de control del EAN ni que el producto exista. Se usa `[0-9]` y no `\d` porque `\d` acepta dígitos de otros alfabetos.
+- **Códigos como texto:** un código que no es texto se rechaza, para no perder silenciosamente los ceros iniciales.
+- **Rangos:** ningún nutriente puede pesar más que el producto: 100 g (o 100000 mg) cada 100 g, o el tamaño de la porción si la base es `porcion`. La energía no puede superar 900 kcal (3766 kJ) cada 100 g, el equivalente a grasa pura.
+- **Valores no informados:** un nutriente ausente es válido, y un cero declarado también.
+- **Nutrientes no contemplados:** los que no están en la tabla de unidades no se validan.
+- **Duplicados:** se conserva la primera aparición válida y se rechazan las siguientes. Si la primera fue rechazada por otra regla, una repetición válida posterior sí entra.
+- **Registro de rechazados:** cada rechazo guarda la posición en el archivo, el código, el nombre, el tipo y el motivo. El programa continúa con los productos válidos.
 
 ## 7. Ejemplo de resultado
 
