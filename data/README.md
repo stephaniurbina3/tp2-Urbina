@@ -5,7 +5,7 @@
 - **Procedimiento de obtención:** `python scripts/generar_muestra.py`. Usa una semilla fija (2026), por lo que, con la misma versión de Python, produce siempre la misma muestra. Los archivos de esta carpeta son la referencia.
 - **Responsable:** Stephani Urbina (autora del trabajo).
 - **Licencia o condiciones de uso:** datos de elaboración propia, sin restricciones de uso.
-- **Fecha de generación:** <21/10/2026>
+- **Fecha de generación:** 21/10/2026
 - **Por qué simulados:** el plan original era usar un extracto de Open Food Facts, pero su API pública respondió con error 503 y restringe las consultas anónimas en momentos de alta demanda. Se optó por datos simulados, manteniendo la estructura de una etiqueta real (distintas unidades y bases de referencia).
 
 ## Archivos
@@ -38,18 +38,23 @@ En el JSON, cada nutriente es un objeto, por ejemplo `"azucares": {"valor": 12.5
 Tamaño: 60 observaciones y 12 variables (19 columnas en el CSV, porque cada nutriente tiene valor y unidad).
 
 ## Defectos deliberados
-Para que el flujo de validación tenga algo que detectar, se introdujeron 4 errores a propósito. **No son fallas del script.**
+Para que la validación tenga algo que detectar, se introdujeron 4 errores a propósito. **No son fallas del script.** El programa los rechaza y los registra en `outputs/rechazados.csv`:
 
-| Defecto | Qué se espera del programa |
+| Defecto | Tipo de rechazo |
 |---|---|
-| Un código de 7 dígitos | Rechazarlo (no cumple el patrón de 8 o 13 dígitos) |
-| Azúcares con valor negativo (-4,0 g) | Rechazarlo (valor fuera de rango) |
-| Grasas con 140 g cada 100 g | Rechazarlo (imposible por 100 g) |
-| Un código repetido | Conservar una ficha y registrar la otra como duplicada |
+| Un código de 7 dígitos | `codigo_invalido` |
+| Azúcares con valor negativo (-4,0 g) | `valor_negativo` |
+| Grasas con 140 g cada 100 g | `fuera_de_rango` |
+| Un código repetido (se conserva la primera aparición) | `codigo_duplicado` |
+
+Resultado esperado al leer la muestra: 60 registros leídos, 56 válidos y 4 rechazados.
 
 ## Cómo reconstruir la muestra
-1. `pip install -r requirements.txt`
-2. `python scripts/generar_muestra.py`
+Desde la raíz del repositorio (no requiere instalar dependencias: usa solo la biblioteca estándar de Python):
+
+`python scripts/generar_muestra.py`
+
+Con la misma versión de Python se obtiene la misma muestra (semilla 2026). Los archivos de esta carpeta son la referencia.
 
 ## Limitaciones, sesgos y restricciones
 - Los datos son inventados: no representan productos reales y los códigos de barras son ficticios. Pueden coincidir por azar con códigos reales, y no se calcula el dígito de control.

@@ -1,1 +1,2 @@
-pandas>=2.0
+# Este proyecto usa solo la biblioteca estandar de Python (csv, json, re, unittest, etc.).
+# No hay dependencias externas que instalar.

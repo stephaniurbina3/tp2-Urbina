@@ -1,67 +1,55 @@
 # Comparador de etiquetas nutricionales
 
-**Autor:** Stephani Urbina
+**Autora:** Stephani Urbina
 **Materia:** Programación Orientada a Datos · UCA · Licenciatura en Ciencia de Datos · 2026
 **Trabajo:** TP2 individual
 
-## 1. Problema, usuario y solución propuesta
+## 1. Problema, usuario y pregunta
 
-**Problema.** Comparar las etiquetas nutricionales de varios productos exige localizar cada ficha y homogeneizar unidades (g, mg, kcal, kJ) y bases de referencia (por 100 g o por porción). Además, cuando un nutriente falta en la ficha puede confundirse con cero, y eso produce comparaciones incorrectas: "no informado" no es lo mismo que "no contiene".
+**Problema.** Comparar las etiquetas nutricionales de varios productos exige homogeneizar unidades (g, mg, kcal, kJ) y bases de referencia (por 100 g o por porción). Además, un nutriente que falta en la ficha puede confundirse con cero y producir comparaciones incorrectas: "no informado" no es lo mismo que "no contiene".
 
 **Usuario.** Una persona que quiere comparar productos envasados (consumidor, estudiante de nutrición, analista) y necesita una tabla homogénea y confiable para decidir o analizar.
 
-**Solución.** Un programa en Python con un catálogo consultable de productos, cargado desde archivos CSV o JSON equivalentes. Quien lo usa elige un código o una categoría y obtiene una comparación de nutrientes por cada 100 g, que puede exportar.
+**Pregunta que guía el análisis.** ¿Cómo se comparan, sobre una base común de 100 g, los nutrientes de distintos productos envasados o de una categoría, y qué datos no están informados?
 
-## 2. Funcionalidades y modo de uso
+**Solución.** Un programa en Python con un menú interactivo en la terminal. Carga un catálogo de productos desde archivos CSV o JSON equivalentes, valida cada ficha (las inválidas se apartan y se registran con su motivo), lleva todos los nutrientes a una unidad común por cada 100 g y permite buscar, comparar y exportar.
 
-Operaciones previstas para la primera versión, a través de un menú interactivo en la terminal:
+**Resultado e interpretación.** Una tabla con una fila por producto y una columna por nutriente, por cada 100 g y en una unidad común. Cada valor es lo declarado en la ficha, convertido; no se verifica contra el producto real. `N/D` (en pantalla) o `no disponible` (en los archivos) indica que la ficha no informa ese nutriente: no equivale a cero.
 
-1. Listar las categorías disponibles y cuántos productos tiene cada una.
-2. Buscar un producto por código de barras (EAN de 8 o 13 dígitos) y mostrar su ficha.
-3. Comparar los productos de una categoría.
-4. Comparar un grupo de productos indicando sus códigos.
-5. Exportar la comparación en CSV o JSON.
+## 2. Modo de uso
 
-**Resultado e interpretación.** La comparación es una tabla con una fila por producto y una columna por nutriente, todo expresado por 100 g y en una unidad común. Los valores **no disponibles** se marcan explícitamente y nunca se reemplazan por cero. Cada valor debe leerse como "lo declarado en la ficha, convertido a la unidad de comparación"; no se verifica contra el producto real.
+Al iniciar, el programa pide la ruta del archivo de datos: Enter usa `data/productos.csv`; también se puede escribir la ruta de un `.csv` o `.json` (o `salir`). Después muestra cuántos registros leyó, cuántos son válidos y cuántos rechazó, guarda los rechazados en `outputs/rechazados.csv` y abre el menú:
 
-**Instrucciones de uso.**
-1. Ejecutar `python src/main.py` desde la raíz del repositorio (ver sección 5).
-2. Indicar la ruta del archivo de datos (CSV o JSON) o apretar Enter para usar la predeterminada, `data/productos.csv`. El programa muestra cuántos registros leyó, cuántos son válidos y cuántos rechazó (por tipo), y guarda los rechazados con su motivo en `outputs/rechazados.csv`.
-3. Elegir una opción del menú: listar categorías, buscar un producto por código EAN, comparar una categoría, comparar productos por códigos EAN, o exportar la última comparación a `outputs/` en CSV o JSON.
-4. Después de cada operación se vuelve al menú; la opción `0` cierra el programa.
+| Opción | Qué hace |
+|---|---|
+| 1 | Lista las categorías con la cantidad de productos de cada una |
+| 2 | Pide un código EAN y muestra la ficha del producto, por 100 g |
+| 3 | Muestra las categorías, pide una (sin distinguir mayúsculas ni tildes) y compara todos sus productos |
+| 4 | Pide uno o varios códigos EAN (separados por espacios o comas) y compara esos productos |
+| 5 | Exporta la última comparación a `outputs/`, en CSV o JSON según la extensión del nombre |
+| 0 | Sale del programa |
 
-Los valores no disponibles se muestran como `N/D` en pantalla y como `no disponible` en los archivos exportados. Un ejemplo completo está en la sección 7.
+Después de cada operación se vuelve al menú. Los errores de entrada (código inexistente, categoría sin productos, archivo inexistente) se informan con un mensaje claro y el programa sigue.
 
 ## 3. Alcance de la primera versión
 
-**Incluye**
-- Carga de productos desde archivos CSV y JSON equivalentes.
-- Validación del código (patrón de 8 o 13 dígitos) y de los valores de la ficha.
-- Conversión de unidades y de bases de referencia a 100 g.
-- Búsqueda por código y selección por categoría, admitiendo varias categorías por producto.
-- Registro de los productos rechazados y su motivo.
-- Exportación de la comparación.
-- Pruebas automatizadas y documentación.
-
-**Queda fuera**
-- Interfaz web o gráfica.
-- Descarga automática desde la API de Open Food Facts.
-- Verificación del dígito de control del EAN: solo se valida el patrón de dígitos.
-- Puntajes de salubridad (por ejemplo, Nutri-Score) y recomendaciones.
-- Aprendizaje automático.
+- **Incluye:** carga desde CSV y JSON equivalentes, validación del código (8 o 13 dígitos) y de los valores, conversión de unidades y de bases de referencia a 100 g, búsqueda por código y selección por categoría (un producto puede tener varias), registro de rechazados con su motivo, exportación a CSV o JSON, pruebas automatizadas y documentación.
+- **Queda fuera:** interfaz web o gráfica, descarga automática desde la API de Open Food Facts, verificación del dígito de control del EAN, puntajes de salubridad (como Nutri-Score) y recomendaciones, y aprendizaje automático.
 
 ## 4. Datos: fuente, licencia y unidad de análisis
 
-- **Fuente de referencia:** [Open Food Facts](https://world.openfoodfacts.org/data). El volcado completo pesa varios GB y no se incluye en el repositorio.
-- **Muestra incluida:** por problemas con la API de Open Food Facts, `data/productos.csv` y `data/productos.json` contienen una muestra de **datos ficticios** con el mismo formato que tendrían los datos reales. Se genera con `scripts/generar_muestra`. Procedencia, unidades y criterios de selección: ver `data/README.md`.
-- **Licencia de los datos de referencia:** Open Database License (ODbL) para la base y Database Contents License para los contenidos; se cita la fuente.
-- **Unidad de análisis:** un producto, identificado por su código de barras.
+- **Fuente:** datos **simulados**, generados con `scripts/generar_muestra.py` (semilla fija). Imitan etiquetas de productos envasados, pero no son productos reales.
+- **Por qué simulados:** se intentó usar un extracto de Open Food Facts, pero su API pública devolvió error 503 y restringe las consultas anónimas cuando hay mucha demanda.
+- **Responsable y licencia:** datos propios, sin restricciones de uso.
+- **Unidad de análisis:** un producto, identificado por su código de barras (ficticio).
+- **Archivos:** `data/productos.csv` y `data/productos.json`, con los mismos 60 productos en ambos formatos (4 con defectos deliberados para probar la validación).
+- **Variables, procedimiento y limitaciones:** ver [`data/README.md`](data/README.md). Para regenerar la muestra: `python scripts/generar_muestra.py`.
 
 ## 5. Instalación y ejecución
 
 Desarrollado con Python 3.14. Los comandos se ejecutan desde la raíz del repositorio (por ejemplo, en la terminal de VS Code).
 
-1. Instalar las dependencias: `pip install -r requirements.txt`
+1. Instalar las dependencias: `pip install -r requirements.txt` (el proyecto usa solo la biblioteca estándar, así que no se instala nada adicional).
 2. Ejecutar la aplicación: `python src/main.py`
 3. Ejecutar las pruebas: `python -m unittest discover -s tests -v`
 
@@ -69,105 +57,40 @@ Si en Windows `python` no se reconoce como comando, probar con `py` (por ejemplo
 
 ## 6. Organización del código
 
-Estructura actual (se irá completando):
-
 ```text
-tp2-apellido/
+tp2-urbina/
 |-- README.md
 |-- requirements.txt
 |-- .gitignore
-|-- src/        código de la aplicación: funciones y clases agrupadas por tema
-|   |-- fuente_datos.py   clase abstracta FuenteDatos
-|   |-- fuente_csv.py     clase FuenteCSV
-|   |-- fuente_json.py    clase FuenteJSON
-|   '-- fuentes.py        selección de la fuente según la extensión
-|-- tests/
-|   '-- test_fuentes.py   pruebas de lectura de CSV y JSON
-|-- scripts/    utilidades para preparar los datos
-|-- data/       muestra de datos y su procedencia
+|-- docs/       diseño en detalle (reglas, funciones y decisiones)
+|-- src/        código de la aplicación
+|-- tests/      pruebas automatizadas (unittest)
+|-- scripts/    generación de la muestra de datos
+|-- data/       muestra de datos (CSV y JSON) y su procedencia
 '-- outputs/    resultados generados (no se versionan)
 ```
 
-`src/` no es un paquete (no tiene `__init__.py`): los módulos se importan por su nombre, por ejemplo `from fuentes import crear_fuente`. Cada clase está en su propio archivo.
-
-Diseño previsto:
-
-| Elemento | Responsabilidad | Estado |
-|---|---|---|
-| `FuenteDatos` | Clase abstracta con `cargar()`; la implementan `FuenteCSV` y `FuenteJSON` | Implementado |
-| `FuenteCSV` / `FuenteJSON` | Leen el archivo y devuelven la misma estructura de productos | Implementado |
-| `crear_fuente()` | Elige la fuente según la extensión del archivo | Implementado |
-| `normalizar_ficha()` | Extrae los campos anidados de un registro y convierte las unidades | Pendiente |
-| `indexar_productos()` | Construye el índice por código, conservando los códigos como texto | Pendiente |
-| `buscar_producto()` | Devuelve la ficha de un código | Pendiente |
-| `comparar_etiquetas()` | Construye la tabla homogénea con marcas de no disponible | Pendiente |
-| `ProductoNutricional` | Clase que contiene la ficha y entrega cada nutriente en la unidad de comparación | Pendiente |
-
-**Expresión regular prevista:** validar que el código tenga exactamente 8 o 13 dígitos. Esta validación **no comprueba el dígito de control** del EAN.
-
-### 6.1 Decisiones de diseño: lectura de datos
-
-- **Una clase por archivo.** `FuenteDatos`, `FuenteCSV` y `FuenteJSON` están en archivos separados. `fuentes.py` solo contiene funciones.
-- **Clase abstracta.** `FuenteDatos` usa `abc.ABC` y declara el método abstracto `cargar()`. Cada formato lo implementa a su manera, y el resto del programa llama a `cargar()` sin saber si el archivo es CSV o JSON (polimorfismo).
-- **Misma estructura de salida.** Las dos fuentes devuelven una lista de diccionarios, uno por producto, con `codigo`, `nombre`, `categorias`, `base`, `porcion_g` (si corresponde) y `nutrientes`. Por eso los dos formatos son intercambiables.
-- **Código como texto.** El código de barras se lee siempre como `str` para conservar los ceros iniciales.
-- **Nutrientes no informados.** Una celda vacía del CSV no se convierte en cero: el nutriente simplemente no aparece en el diccionario del producto.
-- **Selección por extensión.** `crear_fuente(ruta)` elige `FuenteCSV` o `FuenteJSON` según la extensión (sin distinguir mayúsculas) y falla con un mensaje claro si el formato no es compatible.
-- **Solo lectura.** Esta etapa no valida códigos, rangos ni duplicados, y no convierte unidades: eso se hace en una etapa posterior.
-- **Errores claros.** Archivo inexistente, columnas faltantes, números inválidos (con el número de fila), JSON mal formado o con estructura incorrecta se informan con un mensaje que dice qué falló y dónde.
-- **Biblioteca estándar.** Se usan `csv` y `json`, que alcanzan para este caso.
-- **Pruebas.** `tests/test_fuentes.py` prueba cada fuente con archivos temporales, la selección de la fuente, que la clase abstracta no se pueda instanciar y la equivalencia entre `data/productos.csv` y `data/productos.json`.
-
-### Reglas de validación (`src/validaciones.py`)
-
-Cada regla levanta un `ErrorDatos` (definido en `src/error_datos.py`) con un **tipo** y un **detalle**. `validar_catalogo()` atrapa el error, aparta el producto y lo registra, sin detener el programa. `cargar_catalogo()` (en `src/pipeline.py`) integra la lectura con la validación y devuelve la lista de productos válidos y la de rechazados.
-
-Si un producto incumple varias reglas, se registra la primera que falla, en este orden:
-
-| Orden | Regla | Tipo de rechazo |
-|---|---|---|
-| 1 | El código es texto y tiene exactamente 8 o 13 dígitos | `codigo_invalido` |
-| 2 | El nombre no está vacío | `nombre_faltante` |
-| 3 | La base es `100g` o `porcion`; si es `porcion`, hay un `porcion_g` mayor que cero | `base_invalida` |
-| 4 | Cada nutriente informado tiene un valor numérico y finito | `valor_invalido` |
-| 5 | La unidad es una de las admitidas (energía: `kcal` o `kJ`; el resto: `g` o `mg`) | `unidad_desconocida` |
-| 6 | El valor no es negativo | `valor_negativo` |
-| 7 | El valor no supera el máximo posible (ver abajo) | `fuera_de_rango` |
-| 8 | El código no se repite en el catálogo | `codigo_duplicado` |
-
-**Decisiones:**
-- **Expresión regular del código:** `[0-9]{8}|[0-9]{13}`, aplicada con `fullmatch`. Valida solo la forma (8 o 13 dígitos ASCII). No comprueba el dígito de control del EAN ni que el producto exista. Se usa `[0-9]` y no `\d` porque `\d` acepta dígitos de otros alfabetos.
-- **Códigos como texto:** un código que no es texto se rechaza, para no perder silenciosamente los ceros iniciales.
-- **Rangos:** ningún nutriente puede pesar más que el producto: 100 g (o 100000 mg) cada 100 g, o el tamaño de la porción si la base es `porcion`. La energía no puede superar 900 kcal (3766 kJ) cada 100 g, el equivalente a grasa pura.
-- **Valores no informados:** un nutriente ausente es válido, y un cero declarado también.
-- **Nutrientes no contemplados:** los que no están en la tabla de unidades no se validan.
-- **Duplicados:** se conserva la primera aparición válida y se rechazan las siguientes. Si la primera fue rechazada por otra regla, una repetición válida posterior sí entra.
-- **Registro de rechazados:** cada rechazo guarda la posición en el archivo, el código, el nombre, el tipo y el motivo. El programa continúa con los productos válidos.
-
-### Dominio y conversión de unidades (`src/producto.py`, `src/conversiones.py`, `src/pipeline.py`)
-
-- **`ProductoNutricional`** (`producto.py`) contiene la ficha normalizada de un producto: código, nombre, categorías (lista) y nutrientes por cada 100 g. Su método `obtener(nutriente)` devuelve el valor en la unidad de comparación, o `None` si el nutriente no está disponible. Si el nombre no corresponde a un nutriente conocido, levanta un error, para que un error de tipeo no se confunda con un dato no disponible.
-- **`normalizar_ficha()`** (`pipeline.py`) transforma un producto ya validado en una ficha homogénea: convierte cada nutriente a su unidad de comparación y lo lleva a una base de 100 g. No redondea; los valores conservan su precisión.
-- **`preparar_catalogo()`** (`pipeline.py`) integra el flujo: lee el archivo, valida, normaliza los productos válidos y devuelve también el registro de rechazados. Los productos rechazados no se normalizan.
-
-**Unidad de comparación (siempre por cada 100 g):**
-
-| Nutriente | Unidad |
+| Módulo (`src/`) | Responsabilidad |
 |---|---|
-| Energía | kcal |
-| Grasas, grasas saturadas, carbohidratos, azúcares, proteínas | g |
-| Sodio | mg |
+| `main.py` | Menú interactivo (punto de entrada); solo conversa con quien usa el programa |
+| `pipeline.py` | Flujo de datos: cargar, normalizar, indexar, buscar, seleccionar y comparar |
+| `fuente_datos.py`, `fuente_csv.py`, `fuente_json.py`, `fuentes.py` | Lectura de CSV y JSON detrás de una interfaz común; `crear_fuente()` elige según la extensión |
+| `validaciones.py` | Reglas de validación y registro de rechazados |
+| `producto.py` | Clase de dominio `ProductoNutricional` |
+| `conversiones.py` | Unidad de comparación, conversión de unidades y base de 100 g |
+| `salidas.py` | Tabla para pantalla, exportación a CSV o JSON y archivo de rechazados |
+| `error_datos.py`, `error_consulta.py` | Errores propios |
 
-**Conversiones** (`conversiones.py`):
-- 1 kcal = 4,184 kJ.
-- 1 g = 1000 mg.
-- Base `porcion`: valor × 100 / `porcion_g`. Si la base ya es `100g`, el valor no cambia.
-- Las unidades incompatibles (por ejemplo, de g a kcal) levantan un error.
+**Flujo:** leer (CSV o JSON) → inspeccionar y validar → limpiar y transformar (normalizar a 100 g) → analizar (buscar, seleccionar y comparar) → comunicar (tabla en pantalla, exportación y registro de rechazados).
 
-**Tratamiento de faltantes:**
-- Un nutriente no disponible no aparece en la ficha normalizada y `obtener()` devuelve `None`. Nunca se convierte en cero.
-- Un cero declarado en la etiqueta sí se conserva como `0.0`.
-- Las categorías se guardan como lista; la regla para seleccionar productos por categoría se documentará al implementarla.
+**Decisiones de diseño principales** (detalle en [`docs/diseno.md`](docs/diseno.md)):
+
+- **Fuentes de datos.** `FuenteDatos` es una clase abstracta con el método `cargar()`; `FuenteCSV` y `FuenteJSON` lo implementan y devuelven la misma estructura de productos. Así el resto del programa no depende del formato del archivo.
+- **Etapas separadas.** Leer no valida; validar no convierte; normalizar solo recibe productos ya válidos; comparar usa fichas normalizadas; mostrar y guardar es otra capa. Cada etapa se prueba por separado y un cambio en una no obliga a tocar las demás.
+- **Clase de dominio.** `ProductoNutricional` contiene la ficha normalizada. Su método `obtener(nutriente)` devuelve el valor por 100 g en su unidad de comparación, o `None` si no está disponible.
+- **Conversión y base común.** Energía en kcal; grasas, saturadas, carbohidratos, azúcares y proteínas en g; sodio en mg; todo por cada 100 g. Equivalencias: 1 kcal = 4,184 kJ; 1 g = 1000 mg; un valor por porción se multiplica por 100 y se divide por el tamaño de la porción.
+- **Categorías.** Un producto pertenece a todas las categorías de su lista, y se comparan sin distinguir mayúsculas, tildes ni espacios.
+- **Errores.** `ErrorDatos` (datos que incumplen las reglas) y `ErrorConsulta` (consultas que no se pueden resolver) son distintos. El menú atrapa solo errores previstos y deja visibles los inesperados.
 
 ## 7. Ejemplo de resultado
 
@@ -228,12 +151,7 @@ Valores por cada 100 g (energía en kcal, sodio en mg, el resto en g). N/D = no 
 Presioná Enter para volver al menú...
 
 === Menú ===
-1. Listar las categorías
-2. Buscar un producto por código EAN
-3. Comparar los productos de una categoría
-4. Comparar productos por códigos EAN
-5. Exportar la última comparación (CSV o JSON)
-0. Salir
+[...]
 Elegí una opción: 5
 Nombre del archivo (termina en .csv o .json, por ejemplo comparacion.csv): comparacion.csv
 Comparación guardada en C:\Users\HP\Documents\GitHub\TP2-POD-Urbina\outputs\comparacion.csv
@@ -241,31 +159,45 @@ Comparación guardada en C:\Users\HP\Documents\GitHub\TP2-POD-Urbina\outputs\com
 Presioná Enter para volver al menú...
 
 === Menú ===
-1. Listar las categorías
-2. Buscar un producto por código EAN
-3. Comparar los productos de una categoría
-4. Comparar productos por códigos EAN
-5. Exportar la última comparación (CSV o JSON)
-0. Salir
+[...]
 Elegí una opción: 0
 ¡Hasta luego!
 ```
 
 Cómo leerlo:
+
 - Cada fila es un producto y cada columna un nutriente, siempre **por cada 100 g**, aunque la etiqueta original estuviera por porción o en otras unidades.
 - `N/D` significa que la etiqueta no informa ese nutriente. No es lo mismo que cero.
 - Los productos rechazados no entran a la comparación: quedan registrados con su motivo en `outputs/rechazados.csv`.
 
 ## 8. Decisiones de limpieza
 
-Decisiones previstas (se confirmarán al implementar):
+Cada producto se valida antes de entrar al catálogo. Si incumple varias reglas, se registra la primera que falla, en este orden:
 
-- Los códigos se leen y se guardan como texto para conservar los ceros iniciales.
-- Un nutriente ausente se registra como _no disponible_; no se reemplaza por cero.
-- Las unidades se convierten a una unidad común de comparación y todo se expresa por 100 g.
-- Si un producto tiene varias categorías, se aplica una regla de selección explícita.
-- Los registros inválidos se apartan y se registran con su motivo, sin detener el programa.
+| Regla | Motivo de rechazo (`tipo`) |
+|---|---|
+| El código es texto y tiene exactamente 8 o 13 dígitos | `codigo_invalido` |
+| El nombre no está vacío | `nombre_faltante` |
+| La base es `100g` o `porcion` (con `porcion_g` mayor que cero) | `base_invalida` |
+| Los valores nutricionales son números finitos | `valor_invalido` |
+| La unidad es admitida (energía: kcal o kJ; resto: g o mg) | `unidad_desconocida` |
+| El valor no es negativo | `valor_negativo` |
+| El valor no supera el máximo posible (100 g cada 100 g, o la porción; 900 kcal cada 100 g) | `fuera_de_rango` |
+| El código no se repite | `codigo_duplicado` |
+
+- **Expresión regular del código:** `[0-9]{8}|[0-9]{13}` (con `fullmatch`). Valida solo la **forma**; no comprueba el dígito de control del EAN ni que el producto exista, por eso se complementa con las demás reglas.
+- **Códigos como texto**, para conservar los ceros iniciales.
+- **Duplicados:** se conserva la primera aparición válida y se rechazan las siguientes.
+- **Valores no informados:** un nutriente ausente es válido, no se agrega a la ficha y nunca se reemplaza por cero; un cero declarado sí se conserva.
+- **Registro de rechazados:** cada producto rechazado se guarda en `outputs/rechazados.csv` con su posición, código, nombre, tipo y motivo, sin detener el programa.
 
 ## 9. Interpretación y limitaciones
 
-_Pendiente: se completará al finalizar. Limitaciones ya conocidas: no se verifica el dígito de control del EAN, se trabaja con una muestra y no con la base completa, y la calidad de la comparación depende de la calidad de las fichas de origen._
+- Los datos son simulados: sirven para desarrollar y probar el programa, no para sacar conclusiones sobre alimentos reales. Los códigos son ficticios y los faltantes se eligen al azar.
+- Cada valor es lo declarado en la ficha, convertido a 100 g y a la unidad común; no se verifica contra el producto real. Los valores se redondean a 2 decimales solo en la tabla.
+- No se comprueba el dígito de control del EAN.
+- Se contemplan siete nutrientes y solo las unidades kcal, kJ, g y mg; otros nutrientes o unidades no se procesan.
+- Si un producto incumple varias reglas, se registra solo la primera.
+- La selección por categoría compara nombres (sin mayúsculas ni tildes); no reconoce sinónimos ni nombres parecidos.
+- Es una aplicación de terminal: no tiene interfaz gráfica ni descarga datos de internet.
+- Mejoras posibles: verificar el dígito de control, registrar todos los motivos de rechazo de un producto y trabajar con datos reales (por ejemplo, un extracto de Open Food Facts).

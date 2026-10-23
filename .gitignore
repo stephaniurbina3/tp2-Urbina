@@ -22,7 +22,3 @@ Thumbs.db
 # Salidas generadas
 outputs/*
 !outputs/.gitkeep
-
-# Datos crudos pesados (el volcado completo no se sube)
-data/raw/
-*.csv.gz
