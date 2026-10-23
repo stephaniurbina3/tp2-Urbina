@@ -24,7 +24,13 @@ Operaciones previstas para la primera versión, a través de un menú interactiv
 
 **Resultado e interpretación.** La comparación es una tabla con una fila por producto y una columna por nutriente, todo expresado por 100 g y en una unidad común. Los valores **no disponibles** se marcan explícitamente y nunca se reemplazan por cero. Cada valor debe leerse como "lo declarado en la ficha, convertido a la unidad de comparación"; no se verifica contra el producto real.
 
-_Instrucciones de uso con ejemplos: pendiente._
+**Instrucciones de uso.**
+1. Ejecutar `python src/main.py` desde la raíz del repositorio (ver sección 5).
+2. Indicar la ruta del archivo de datos (CSV o JSON) o apretar Enter para usar la predeterminada, `data/productos.csv`. El programa muestra cuántos registros leyó, cuántos son válidos y cuántos rechazó (por tipo), y guarda los rechazados con su motivo en `outputs/rechazados.csv`.
+3. Elegir una opción del menú: listar categorías, buscar un producto por código EAN, comparar una categoría, comparar productos por códigos EAN, o exportar la última comparación a `outputs/` en CSV o JSON.
+4. Después de cada operación se vuelve al menú; la opción `0` cierra el programa.
+
+Los valores no disponibles se muestran como `N/D` en pantalla y como `no disponible` en los archivos exportados. Un ejemplo completo está en la sección 7.
 
 ## 3. Alcance de la primera versión
 
@@ -53,15 +59,13 @@ _Instrucciones de uso con ejemplos: pendiente._
 
 ## 5. Instalación y ejecución
 
-**Pruebas** (desde la raíz del repositorio):
+Desarrollado con Python 3.14. Los comandos se ejecutan desde la raíz del repositorio (por ejemplo, en la terminal de VS Code).
 
-```text
-python -m unittest discover tests
-```
+1. Instalar las dependencias: `pip install -r requirements.txt`
+2. Ejecutar la aplicación: `python src/main.py`
+3. Ejecutar las pruebas: `python -m unittest discover -s tests -v`
 
-También se pueden ejecutar desde VS Code, en el panel Testing.
-
-_Pendiente: comandos para ejecutar la aplicación (se completarán cuando exista `main.py`)._
+Si en Windows `python` no se reconoce como comando, probar con `py` (por ejemplo, `py src/main.py`).
 
 ## 6. Organización del código
 
@@ -167,7 +171,90 @@ Si un producto incumple varias reglas, se registra la primera que falla, en este
 
 ## 7. Ejemplo de resultado
 
-_Pendiente: se agregará una salida real cuando la aplicación funcione._
+Sesión real con la muestra incluida (`data/productos.csv`): se elige la categoría Yogures y se exporta la comparación.
+
+```text
+Comparador de etiquetas nutricionales
+Ruta del archivo de datos (Enter para usar data\productos.csv, 'salir' para terminar): 
+
+Registros leídos: 60
+  Válidos: 56
+  Rechazados: 4 (codigo_duplicado: 1, codigo_invalido: 1, fuera_de_rango: 1, valor_negativo: 1)
+Registro de rechazados guardado en C:\Users\HP\Documents\GitHub\TP2-POD-Urbina\outputs\rechazados.csv
+
+=== Menú ===
+1. Listar las categorías
+2. Buscar un producto por código EAN
+3. Comparar los productos de una categoría
+4. Comparar productos por códigos EAN
+5. Exportar la última comparación (CSV o JSON)
+0. Salir
+Elegí una opción: 3
+
+Categorías disponibles:
+  Bebidas: 2 producto(s)
+  Cereales: 14 producto(s)
+  Desayuno: 4 producto(s)
+  Galletitas: 14 producto(s)
+  Integrales: 1 producto(s)
+  Jugos: 14 producto(s)
+  Lácteos: 2 producto(s)
+  Postres: 4 producto(s)
+  Sin conservantes: 1 producto(s)
+  Snacks: 1 producto(s)
+  Yogures: 14 producto(s)
+
+Categoría: yogures
+
+Código         Nombre                Energía  Grasas  Satur.  Carbo.  Azúcar  Prot.  Sodio
+-------------  --------------------  -------  ------  ------  ------  ------  -----  -----
+0363856073927  Yogur Frutilla Sigma  44.69    0.5     0.3     6.2     6.2     3.8    89.0 
+0675347897133  Yogur Vainilla Beta   105.16   3.4     2.1     15.6    7.9     3.1    65.0 
+0805780370412  Yogur Natural Sigma   87.2     0.48    0.32    17.84   8.8     3.04   49.6 
+7790125373924  Yogur Durazno Beta    106.0    3.3     2.4     16.1    9.8     3.0    78.0 
+7790668179223  Yogur Frutilla Gamma  85.0     1.1     0.0     N/D     4.5     5.8    44.0 
+7795154742843  Yogur Natural Alfa    92.0     3.6     2.0     11.4    7.8     3.6    63.0 
+7796252807001  Yogur Griego Delta    72.0     0.72    0.72    12.0    8.24    4.4    N/D  
+7796550620484  Yogur Natural Delta   58.8     0.6     0.6     8.5     8.5     4.9    60.0 
+7797207547354  Yogur Bebible Beta    89.6     2.88    2.08    12.24   5.28    3.84   60.8 
+7797443256885  Yogur Frutilla Alfa   95.0     1.9     1.9     14.4    8.6     4.9    72.0 
+7797457212835  Yogur Natural Gamma   83.0     1.4     1.4     13.9    5.4     3.6    62.0 
+7797916979780  Yogur Griego Alfa     106.0    2.4     1.8     17.1    12.0    N/D    53.0 
+7798195391827  Yogur Frutilla Beta   89.41    2.35    1.76    11.29   4.18    5.82   59.41
+7799822290044  Yogur Bebible Alfa    90.0     3.94    0.06    8.12    8.12    5.59   46.47
+
+Valores por cada 100 g (energía en kcal, sodio en mg, el resto en g). N/D = no disponible.
+
+Presioná Enter para volver al menú...
+
+=== Menú ===
+1. Listar las categorías
+2. Buscar un producto por código EAN
+3. Comparar los productos de una categoría
+4. Comparar productos por códigos EAN
+5. Exportar la última comparación (CSV o JSON)
+0. Salir
+Elegí una opción: 5
+Nombre del archivo (termina en .csv o .json, por ejemplo comparacion.csv): comparacion.csv
+Comparación guardada en C:\Users\HP\Documents\GitHub\TP2-POD-Urbina\outputs\comparacion.csv
+
+Presioná Enter para volver al menú...
+
+=== Menú ===
+1. Listar las categorías
+2. Buscar un producto por código EAN
+3. Comparar los productos de una categoría
+4. Comparar productos por códigos EAN
+5. Exportar la última comparación (CSV o JSON)
+0. Salir
+Elegí una opción: 0
+¡Hasta luego!
+```
+
+Cómo leerlo:
+- Cada fila es un producto y cada columna un nutriente, siempre **por cada 100 g**, aunque la etiqueta original estuviera por porción o en otras unidades.
+- `N/D` significa que la etiqueta no informa ese nutriente. No es lo mismo que cero.
+- Los productos rechazados no entran a la comparación: quedan registrados con su motivo en `outputs/rechazados.csv`.
 
 ## 8. Decisiones de limpieza
 

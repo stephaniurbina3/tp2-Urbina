@@ -63,6 +63,15 @@ class PruebasNormalizarFicha(unittest.TestCase):
         nutrientes = normalizar_ficha(producto)["nutrientes"]
         self.assertEqual(nutrientes["grasas"], 0.0)
 
+    def test_los_valores_son_siempre_decimales(self):
+        # Un JSON puede traer enteros y un CSV siempre da decimales: la ficha unifica el tipo
+        producto = producto_crudo()
+        producto["base"] = "100g"
+        del producto["porcion_g"]
+        producto["nutrientes"]["energia"] = {"valor": 513, "unidad": "kcal"}  # entero
+        nutrientes = normalizar_ficha(producto)["nutrientes"]
+        self.assertIsInstance(nutrientes["energia"], float)
+
     def test_no_modifica_el_producto_original(self):
         producto = producto_crudo()
         copia = copy.deepcopy(producto)

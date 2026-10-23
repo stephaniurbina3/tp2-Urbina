@@ -38,13 +38,21 @@ def normalizar_ficha(producto):
         if dato is None:
             continue  # no disponible
         valor = convertir(dato["valor"], dato["unidad"], unidad_destino)
-        nutrientes[nombre] = a_base_100g(valor, producto["base"], producto.get("porcion_g"))
+        valor_100g = a_base_100g(valor, producto["base"], producto.get("porcion_g"))
+        # float(): el valor queda siempre decimal, venga de un CSV (texto) o de un
+        # JSON (que puede traer enteros), asi ambos formatos dan fichas identicas
+        nutrientes[nombre] = float(valor_100g)
     return {
         "codigo": producto["codigo"],
         "nombre": producto["nombre"],
         "categorias": separar_categorias(producto.get("categorias")),
         "nutrientes": nutrientes,
     }
+
+
+def normalizar_catalogo(validos):
+    """Normaliza los productos validos y los devuelve como ProductoNutricional."""
+    return [ProductoNutricional(normalizar_ficha(p)) for p in validos]
 
 
 def preparar_catalogo(ruta):
@@ -54,8 +62,7 @@ def preparar_catalogo(ruta):
     (solo los validos) y rechazados es el registro de productos apartados.
     """
     validos, rechazados = cargar_catalogo(ruta)
-    productos = [ProductoNutricional(normalizar_ficha(p)) for p in validos]
-    return productos, rechazados
+    return normalizar_catalogo(validos), rechazados
 
 # Indice, busqueda y seleccion 
 
